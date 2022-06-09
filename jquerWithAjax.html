@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            // Document Ready Event
+            // $(document).ready(function(){
+            //     $("button").click(
+            //         function () {
+            //             alert("Here is the jquery")
+            //         }
+            //     )
+            // })
+  
+          
+            // 100 => CONTINUE
+            // 200 => OK
+            // 400 => BAD REQUEST
+            // 403 => FORBIDDEN
+            // 404 => PAGE NOT FOUND
+            // 500 => INTERNAL SERVER ERROR
+
+          
+
+
+            // Jquery with Ajax
+            // $.ajax(url)
+        </script>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <h2>Some Methods</h2>
+        <h3 id="demo">Checking</h3>
+        <button>Click Me</button>
+
+        <script>
+            var settings = {
+                "method":"GET",
+                "crossDomain":true,
+                "contentType":"text",
+                "headers":{
+                    "accept": "application/text/plain",
+                    "Access-Control-Allow-Origin": "*"
+                },
+                "url": "./helloWorld.txt",
+                "success": function(result){
+                    $("#demo").html(result) 
+                }
+            }
+            $(document).ready(
+                function(){
+                    $("button").click(
+                        function(){
+                            $.ajax(settings)
+                        }
+                    )
+                }
+            )
+        </script>
+    </body>
+</html>
